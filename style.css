@@ -302,3 +302,71 @@ html {
     color: #00d4ff;
     margin-bottom: 15px;
 }
+
+/* --- AJUSTES PARA MOBILE (Celulares e Tablets) --- */
+
+@media (max-width: 768px) {
+    /* Navbar: Coloca a logo em cima e a busca embaixo */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    .search-bar input {
+        width: 100%; /* Busca ocupa a largura toda no celular */
+    }
+
+    /* Banner: Diminui o texto para caber na tela pequena */
+    .banner {
+        height: 300px;
+        padding-left: 5%;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Grid de Produtos: Força 1 ou 2 colunas dependendo do tamanho */
+    .grid-products {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* Ajuste nos Cards para telas pequenas */
+    .product-card img {
+        height: 150px;
+    }
+
+    .product-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    /* Footer: Empilha as informações */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Ajuste para telas MUITO pequenas (iPhone SE, etc) */
+@media (max-width: 400px) {
+    .grid-products {
+        grid-template-columns: 1fr; /* Uma única coluna cheia */
+    }
+}
