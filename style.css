@@ -365,8 +365,67 @@ html {
 }
 
 /* Ajuste para telas MUITO pequenas (iPhone SE, etc) */
-@media (max-width: 400px) {
-    .grid-products {
-        grid-template-columns: 1fr; /* Uma única coluna cheia */
+/* --- AJUSTE MOBILE CORRIGIDO --- */
+@media (max-width: 768px) {
+    
+    /* Faz a Navbar crescer para caber tudo */
+    .navbar {
+        flex-direction: column; /* Coloca um item embaixo do outro */
+        align-items: center;
+        padding: 15px 0;
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    /* Dá destaque à Logo no topo */
+    .logo {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+    }
+
+    /* Organiza os links (Home, Sobre, Contato) para aparecerem no centro */
+    .nav-links {
+        display: flex; /* Garante que eles apareçam */
+        flex-direction: row; /* Mantém lado a lado */
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+
+    /* Ajusta a Barra de Busca para ocupar quase toda a largura */
+    .search-bar {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    /* Alinha o Carrinho e Login lado a lado no final da Navbar */
+    .nav-icons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid #222; /* Uma linha fina para separar */
+    }
+
+    .nav-icons a {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste do Banner para não cortar o texto */
+    .banner {
+        height: 250px;
+        padding: 0 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .banner-content h1 {
+        font-size: 1.8rem;
     }
 }
