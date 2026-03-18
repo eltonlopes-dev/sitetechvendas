@@ -364,7 +364,6 @@ html {
     }
 }
 
-/* Ajuste para telas MUITO pequenas (iPhone SE, etc) */
 /* --- AJUSTE MOBILE CORRIGIDO --- */
 @media (max-width: 768px) {
     
@@ -428,4 +427,18 @@ html {
     .banner-content h1 {
         font-size: 1.8rem;
     }
+}
+
+.btn-buy {
+    display: block;        /* Garante que o link ocupe a largura toda */
+    text-align: center;    /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
